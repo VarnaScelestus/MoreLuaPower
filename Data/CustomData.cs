@@ -25,6 +25,7 @@ public static class LuaPowerData
     static public List<Script> scripts = new List<Script>();
     static public List<LuaPowerTrigger> luaHooks = new List<LuaPowerTrigger>();
     static public Dictionary<string, Tuple<string, string, string>> customUpgrades = new Dictionary<string, Tuple<string, string, string>>();
+    static public List<Tag> characterTagEnums = new List<Tag>();
     static public Dictionary<Type, int> baseGameEnumAmount = new Dictionary<Type, int>();
     static public Dictionary<ItemObject, string> dropChecks = new Dictionary<ItemObject, string>();
     static public List<string> luaFunctionLoaded = new List<string>();
@@ -73,6 +74,10 @@ public static class LuaPowerData
         if (!customEnums.ContainsKey(typeof(BeingType)))
         {
             customEnums.Add(typeof(BeingType), new List<string>());
+        }
+        if (!customEnums.ContainsKey(typeof(Tag)))
+        {
+            customEnums.Add(typeof(Tag), new List<string>());
         }
     }
 
